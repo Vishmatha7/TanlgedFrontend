@@ -13,6 +13,13 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { SearchResultPageComponent } from './search-result-page/search-result-page.component';
 import { ProffesionLsitComponent } from './proffesion-lsit/proffesion-lsit.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatSelectModule, MatOption} from '@angular/material';
+import { MatFormFieldModule } from '@angular/material';
+import {NgbModule, NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
+
+
 
 const appRoutes: Routes = [
   {
@@ -20,11 +27,11 @@ const appRoutes: Routes = [
     component: ProffesionLsitComponent,
     data: { title: 'Product List' }
   },
-  // {
-  //   path: 'product-details/:id',
-  //   //component: ProductDetailComponent,
-  //   data: { title: 'Product Details' }
-  // },
+  {
+    path: 'homepage',
+    component: HomepageComponent,
+    //data: { title: 'Product Details' }
+  },
   // {
   //   path: 'product-add',
   //   //component: ProductAddComponent,
@@ -32,7 +39,7 @@ const appRoutes: Routes = [
   // },
   // {
   //   path: 'product-edit/:id',
-  //   //component: ProductEditComponent,
+  //   component: ,
   //   data: { title: 'Product Edit' }
   // },
   // { path: '',
@@ -48,6 +55,8 @@ const appRoutes: Routes = [
     SearchBarComponent,
     SearchResultPageComponent,
     ProffesionLsitComponent,
+    HomepageComponent,
+   
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -55,7 +64,11 @@ const appRoutes: Routes = [
     BrowserModule,
     [NgSelectModule, FormsModule],
     CarouselModule.forRoot(),
-    HttpModule,HttpClientModule
+    HttpModule,HttpClientModule,
+    BrowserAnimationsModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    NgbModule,
     
   ],
   providers: [],

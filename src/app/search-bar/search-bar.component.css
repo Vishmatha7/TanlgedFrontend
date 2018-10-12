@@ -1,6 +1,6 @@
 .search-bar{
     width: 100%;
-    height: 45px;
+    height: 75px;
     margin-top: 5px;
     background-color: #008EFF;
     padding-top: 7px; 
@@ -11,8 +11,19 @@ li{
     list-style-type: none;
     float: left;
     margin-right: 5%;
-    margin-left: 10%
+    margin-left: 5%
    
 }
+.mat-option-text{
+    width: 50px;
+}
 
-
+.mat-option-select{
+    width: 100px;
+}
+mat-option{
+    width: 100px;
+}
+.cdk-overlay-container{
+    width: 100px;
+}
