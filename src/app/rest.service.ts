@@ -29,6 +29,14 @@ export class RestService {
     return this.http.get(endpoint + 'proffesion').pipe(
       map(this.extractData));
   }
+
+  searchStylist(ProffesionID, State, Date): Observable<any> {
+    return this.http.get(endpoint + 'stylist/' + ProffesionID +'/'+State+'/'+ Date ).pipe(
+      tap(_ => console.log(`search stylist`)),
+      catchError(this.handleError<any>('updateProduct'))
+    );
+  }
+  
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {  
       console.error(error);

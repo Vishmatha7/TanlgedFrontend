@@ -5,14 +5,15 @@
     background-color: #008EFF;
     padding-top: 7px; 
     border-radius: 5px; 
-    padding-left: 5%; 
+    
 }
 li{
     list-style-type: none;
     float: left;
     margin-right: 5%;
-    margin-left: 5%
-   
+    margin-left: 5%;
+    float: left;
+    
 }
 .mat-option-text{
     width: 50px;
@@ -26,4 +27,13 @@ mat-option{
 }
 .cdk-overlay-container{
     width: 100px;
+}
+.submit{
+    width: 100px;
+    height: 39px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    border-collapse: collapse;
+    border-width: 0px;
+
 }

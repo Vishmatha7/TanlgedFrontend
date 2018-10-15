@@ -18,6 +18,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSelectModule, MatOption} from '@angular/material';
 import { MatFormFieldModule } from '@angular/material';
 import {NgbModule, NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
+import { NewSearchComponent } from './new-search/new-search.component';
+
 
 
 
@@ -32,11 +34,16 @@ const appRoutes: Routes = [
     component: HomepageComponent,
     //data: { title: 'Product Details' }
   },
-  // {
-  //   path: 'product-add',
-  //   //component: ProductAddComponent,
-  //   data: { title: 'Product Add' }
-  // },
+  
+  {
+    path: 'search/:ProffesionID :State :Date',
+    component: SearchBarComponent,
+    //data: { title: 'Product Add' }
+  },
+  {
+    path :'search',
+    component:NewSearchComponent,
+  }
   // {
   //   path: 'product-edit/:id',
   //   component: ,
@@ -56,6 +63,7 @@ const appRoutes: Routes = [
     SearchResultPageComponent,
     ProffesionLsitComponent,
     HomepageComponent,
+    NewSearchComponent,
    
   ],
   imports: [
