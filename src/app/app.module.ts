@@ -4,7 +4,7 @@ import {SlideshowModule} from 'ng-simple-slideshow';
 import { CarouselModule } from 'ngx-bootstrap';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HttpClient } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { RestService } from './rest.Service';
 import { RouterModule, Routes } from '@angular/router';
@@ -19,6 +19,8 @@ import {MatSelectModule, MatOption} from '@angular/material';
 import { MatFormFieldModule } from '@angular/material';
 import {NgbModule, NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 import { NewSearchComponent } from './new-search/new-search.component';
+import { ExapleComponent } from './exaple/exaple.component';
+
 
 
 
@@ -64,6 +66,7 @@ const appRoutes: Routes = [
     ProffesionLsitComponent,
     HomepageComponent,
     NewSearchComponent,
+    ExapleComponent,
    
   ],
   imports: [

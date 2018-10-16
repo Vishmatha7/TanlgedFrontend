@@ -30,9 +30,10 @@ export class RestService {
       map(this.extractData));
   }
 
-  searchStylist(ProffesionID, State, Date): Observable<any> {
-    return this.http.get(endpoint + 'stylist/' + ProffesionID +'/'+State+'/'+ Date ).pipe(
-      tap(_ => console.log(`search stylist`)),
+  getPrimarySearch(Proffesion , State, Date): Observable<any> {
+
+    return this.http.get(endpoint + 'stylist/' + Proffesion+'/'+State+'/'+ Date.year+Date.month+Date.day ).pipe(
+      tap(_ => console.log(`search stylist=${Proffesion}+${State}+${Date}`)),
       catchError(this.handleError<any>('updateProduct'))
     );
   }

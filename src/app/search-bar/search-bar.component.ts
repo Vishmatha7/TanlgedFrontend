@@ -13,7 +13,11 @@ import {MatSelectModule} from '@angular/material/select';
 })
 export class SearchBarComponent implements OnInit {
   
-proffesion:any = [];
+proffesion:any = [
+  {id:1, name :'Educator'},
+  {id:2, name :'Stylist'},
+  {id:3, name :'Assitant'}
+];
 cities :any = [
     {id: 1, name: 'washington'},
     {id: 2, name: 'chicago'},
@@ -21,23 +25,31 @@ cities :any = [
     {id: 4, name: 'New York'},
     {id: 5, name: 'iowa'}
 ];
+
 @Input() Data:any = { selectedProffesion: '', selectedState: '', selectedDate:'' };
   constructor(public rest:RestService, private route: ActivatedRoute, private router: Router) { 
    }
   
    ngOnInit() {
-    this.getProffesion();
+    //this.getProffesion();
    }
 
-
-   getProffesion() {
-    this.proffesion = [];
-    this.rest.getProffesion().subscribe((data: {}) => {
-      console.log(data);
-      this.proffesion = data;
-    });
+   selectedProffesion = this.selectedProffesion;
+   selectedCity = this.selectedCity;
+  selectedDate = this.selectedDate;
+  //  getProffesion() {
+  //   this.proffesion = [];
+  //   this.rest.getProffesion().subscribe((data: {}) => {
+  //     console.log(data);
+  //     this.proffesion = data;
+  //   });
     
-    
+  //  }
+   getPrimarySearch(selectedProffesion,selectedCity,selectedDate){
+     this.rest.getPrimarySearch(selectedProffesion ,selectedCity, selectedDate).subscribe((result)=>{
+       this.router.navigate(['search']);
+     });
+     this.rest.getPrimarySearch
    }
    
 }

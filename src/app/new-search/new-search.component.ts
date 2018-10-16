@@ -27,5 +27,13 @@ export class NewSearchComponent implements OnInit {
 
   ngOnInit() {
   }
+  // updateProduct() {
+  //   this.rest.searchStylist(this.route.snapshot.params['selectedProffesion'],this.route.snapshot.params['selectedCity'],this.route.snapshot.params['selectedDate']).subscribe((result) => {
+  //     this.router.navigate(['/product-details/'+result._id]);
+  //   }, (err) => {
+  //     console.log(err);
+  //   });
+  // }
+
 
 }
